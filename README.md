@@ -1,4 +1,10 @@
 # URL Shortener
+![GitHub repo size](https://img.shields.io/github/repo-size/jvopereira/url-shortner)
+![GitHub contributors](https://img.shields.io/github/contributors/jvopereira/url-shortner)
+![GitHub stars](https://img.shields.io/github/stars/jvopereira/url-shortner?style=social)
+![GitHub forks](https://img.shields.io/github/forks/jvopereira/url-shortner?style=social)
+![GitHub issues](https://img.shields.io/github/issues/jvopereira/url-shortner)
+![GitHub license](https://img.shields.io/github/license/jvopereira/url-shortner)
 
 ## Overview
 A minimal, fast and extensible URL shortener built with **Fastify**, **MongoDB**, and **Zod**. Slugs are generated using **nanoid**.
@@ -63,4 +69,4 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
