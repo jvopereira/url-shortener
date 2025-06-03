@@ -1,4 +1,5 @@
 import 'dotenv/config'
+import path from 'path'
 import Fastify from 'fastify'
 import fastifySwagger from '@fastify/swagger'
 import fastifySwaggerUi from '@fastify/swagger-ui'
@@ -52,6 +53,17 @@ await fastify.register(fastifySwaggerUi, {
 
 fastify.register(routes)
 fastify.register(dbConnector)
+
+if (environment === 'production') {
+  fastify.register(require('@fastify/static'), {
+    root: path.join(__dirname, '../../apps/client/dist'),
+    prefix: '/'
+  });
+
+  fastify.get('/*', (req, reply) => {
+    reply.sendFile('index.html');
+  });
+}
 
 fastify.listen(
   { port: port, host: host }, 
